@@ -25,6 +25,7 @@
                 clifford: '#da373d',
                 'accent': '#FFDC26',
                 '111111': 'rgba(17, 17, 17, 1)',
+                'F9DF8A': 'rgba(249, 223, 138, 1)',
               }
             }
           }
@@ -33,64 +34,133 @@
 </head>
 <body>
     <!-- header -->
-     <header class="container mx auto">
-        <div class="navbar bg-base-100 bg-white border border-black md:hidden  ">
-            <div class="navbar-start flex-row-reverse flex-1">
-              <div class="dropdown lg:hidden md:invisible">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5 "
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 6h16M4 12h8m-8 6h16" />
-                  </svg>
-                </div>
-                <ul
-                  tabindex="0"
-                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow md:hidden ">
-                  <li><a>Find a pet</a></li>
-                  <li><a>Breeds</a></li>
-                  <li><a>Contact us</a></li>
-                </ul>
-              </div>
-             <div  class=" flex-1 md:flex ">
-                <img  class="w-8 h-8" src="c1-assets/logo-header.png" alt="">
-                <a class=" hidden md:block lg:block btn btn-ghost font-sora text-2xl text-111111">Browse<span class="text-accent">4</span>Pets</a>
-             </div>
-            </div>
-            <div class="navbar-center hidden lg:flex font-s">
-              <ul class="menu menu-horizontal px-1 font-sora text-111111 text-xl">
-                <li><a>Find a pet</a></li>
-                <li><a>Breeds</a></li>
-                <li><a>Contact us</a></li>
-              </ul>
-            </div>
-            <div class="navbar-end md:flex space-x-2 text-xl font-sora text-111111 hidden md:block">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                  </svg>
-                  
-                <button class="border border-accent w-36 h-12 rounded-lg">Login</button>
-                <button class="bg-accent w-36 h-12 rounded-lg">Register</button>
-            </div>
+     <header class="md:w-10/12  md:mx-auto  ">
+      <div class="navbar bg-base-100 border border-black md:border-hidden " >
+        <div class="navbar-start ">
+          <img class="w-12 h-12" src="c1-assets/logo-header.png" alt="">
+          <a class="btn btn-ghost text-2xl text-11111 font-sora invisible md:visible">Browse<span class="text-accent">4</span>Pets</a>
         </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1  text-11111 font-sora text-xl">
+            <li><a>Find a pet</a></li>
+            <li>
+             <a> Breeds</a>
+            </li>
+            <li><a>Contact us </a></li>
+          </ul>
+        </div>
+        <div class="navbar-end space-x-2 invisible md:visible text-11111 font-sora text-xl ">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+          </svg>
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          </svg>
+          
+          <button class=" btn border border-accent ">Login</button>
+          <button class=" btn bg-accent">Register</button>
+        </div>
+        <div class="dropdown relative ">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-32 p-2 shadow absolute -left-20 ">
+            <li><a>Find a pet</a></li>
+          <li>
+           <a> Breeds</a>
+          </li>
+          <li><a>Item 3</a></li>
+          </ul>
+        </div>
+      </div>
 
-        <div>
-            <h2>Pamper Your Pet, Because They Deserve the Bes</h2>
+      <div class=" md:relative mb-14">
+        <div class="md:absolute md:pt-40 space-y-5 px-5 mt-5 ">
+          <h2 class="font-adlam text-111111 text-3xl ">Pamper Your Pet, <br> Because They Deserve <br>the Bes</h2>
+          <p class="font-sora text-111111">
+            Discover a world of treats, toys, and essentials handpicked for <br> your furry friends. Shop now and make tails wag with joy!
+          </p>
+          <button class=" btn border-none bg-accent">Find a pet</button>
         </div>
+        <div><img class="w-full" src="c1-assets/cat-big.png" alt=""></div>
+
+      </div>
 
      </header>
      <!-- main -->
-      <main>
+      <main class="md:w-10/12  md:mx-auto ">
+        <!-- section 1 -->
+         <section class="">
+          <h2 class=" mx-6 mb-12 mt-36 font-adlam tex-111111 text-4xl ">Browse By Categories</h2>
+          <div class="grid md:grid-flow-col mx-6  ">
+            <div class="w-[200px] h-[250px] justify-items-center space-y-6 bg-F9DF8A content-center rounded-xl">
+            <img class="bg-white p-7 rounded-full" src="c1-assets/dog-cartoon.png" alt="">
+            <h2 class="font-adlam text-xl text-black">Dog</h2>
+            <p class="text-base text-black font-sora">3 items</p>
+       </div>
+          <div class="w-[200px] h-[250px] justify-items-center space-y-6 bg-F9DF8A content-center rounded-xl">
+            <img class="bg-white p-7 rounded-full" src="c1-assets/fish-cartoon.png" alt="">
+            <h2 class="font-adlam text-xl text-black">Fish</h2>
+            <p class="text-base text-black font-sora">3 items</p>
+       </div>
+          <div class="w-[200px] h-[250px] justify-items-center space-y-6 bg-F9DF8A content-center rounded-xl">
+            <img class="bg-white p-7 rounded-full" src="c1-assets/cat-cartoon.png" alt="">
+            <h2 class="font-adlam text-xl text-black">Cat</h2>
+            <p class="text-base text-black font-sora">3 items</p>
+       </div>
+          <div class="w-[200px] h-[250px] justify-items-center space-y-6 bg-F9DF8A content-center rounded-xl">
+            <img class="bg-white p-7 rounded-full" src="c1-assets/bird-cartoon.png" alt="">
+            <h2 class="font-adlam text-xl text-black">Birds</h2>
+            <p class="text-base text-black font-sora">3 items</p>
+       </div>
+          <div class="w-[200px] h-[250px] justify-items-center space-y-6 bg-F9DF8A content-center rounded-xl">
+            <img class="bg-white p-7 rounded-full" src="c1-assets/mouse-cartoon.png" alt="">
+            <h2 class="font-adlam text-xl text-black">Small pet</h2>
+            <p class="text-base text-black font-sora">3 items</p>
+       </div>
+          <div class="w-[200px] h-[250px] justify-items-center space-y-6 bg-F9DF8A content-center rounded-xl">
+            <img class="bg-white p-7 rounded-full" src="c1-assets/rabbit-cartoon.png" alt="">
+            <h2 class="font-adlam text-xl text-black">Rabit</h2>
+            <p class="text-base text-black font-sora">2 items</p>
+          </div>
+        </div>
+         </section>
+         <!-- section 2 -->
+          <section>
+            <div 1>
+              <h2 class=" mx-6 mb-12 mt-36 font-adlam tex-111111 text-4xl ">Trending Pet Products</h2>
+              <div 2>
+                <div 4 class=" rounded-xl bg-F9DF8A h-[500px] w-[40%] relative space-y-5">
+                  <h2 class=" mx-6  mt-36 font-adlam tex-111111 text-4xl pt-10 ">T-Shirt For Dogs</h2>
+                  <p class="font-sora text-111111 mx-6">
+                   Discover a world of treats, toys, and <br> essentials handpicked for..
+                  </p>
+                  <button class="mx-6 btn bg-white">Shop Now</button>
+                  <img class="w-72 absolute right-0 bottom-4 " src="c1-assets/cute-pet-small.png" alt="">
+
+                </div 4>
+                  <div 5>
+                    
+                    </div 5>
+
+
+              </div 2>
+            </div 1>
+          </section>
 
       </main>
       <!-- footer -->
